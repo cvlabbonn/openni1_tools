@@ -1,0 +1,20 @@
+            PCD_RGB   pcd_RGB;
+            pcd_RGB.R  = color_mat.at<cv::Vec3b>(j,i)[0];
+            pcd_RGB.G  = color_mat.at<cv::Vec3b>(j,i)[1];
+            pcd_RGB.B  = color_mat.at<cv::Vec3b>(j,i)[2];
+            pcd_RGB.A  = 0;
+
+            uint32_t r = static_cast<uint32_t>( color_mat.at<cv::Vec3b>(j,i)[2] );
+            uint32_t g = static_cast<uint32_t>( color_mat.at<cv::Vec3b>(j,i)[1] );
+            uint32_t b = static_cast<uint32_t>( color_mat.at<cv::Vec3b>(j,i)[0] );
+            uint32_t rgb = (uint32_t)(r << 16) | (uint32_t)(g << 8) | (uint32_t)b;
+
+
+//            vertex.rgb = pcd_RGB.RGB_float;
+            vertex.r = color_mat.at<cv::Vec3b>(j,i)[2];
+            vertex.g = color_mat.at<cv::Vec3b>(j,i)[1];
+            vertex.b = color_mat.at<cv::Vec3b>(j,i)[0];
+//            vertex.rgb = *reinterpret_cast<float*>(&rgb);
+
+            // the point is pushed back in the cloud
+            cloud.points.push_back( vertex );
