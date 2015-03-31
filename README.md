@@ -1,7 +1,7 @@
-tools_openni2
+tools_openni1
 =============
 
-Simple recording tool using OpenNI2 for Primesense cameras. Once the program starts, it will show 4 windows. The one named Limits will permit to set the x and y limits of the pointcloud (based on the x and y limit of the RGB image) and also set the limits of the depth. Depending on the camera this "z" max limit can be changed to permit changes between close and long ranged cameras.
+Simple recording tool using OpenNI for Kinect cameras. Once the program starts, it will show 4 windows. The one named Limits will permit to set the x and y limits of the pointcloud (based on the x and y limit of the RGB image) and also set the limits of the depth. Depending on the camera this "z" max limit can be changed to permit changes between close and long ranged cameras.
 
 The other 3 windows will show in real time the RGB feed from the camera (color window), the visual representation of the depth (depth window), and the visual representation of the registration of the valid depth to the color image (RGBD  window).
 
